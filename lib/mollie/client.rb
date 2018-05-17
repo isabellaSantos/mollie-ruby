@@ -4,12 +4,13 @@ require 'json'
 module Mollie
   class Client
     include HTTParty
-    base_uri 'https://api.mollie.nl/v1'
+    base_uri "https://api.mollie.nl"
     format :json
-    attr_accessor :api_key
+    attr_accessor :api_key, :api_version
 
-    def initialize(api_key)
+    def initialize(api_key, api_version = 'v1')
       self.api_key = api_key
+      self.api_version = api_version
     end
 
     def auth_token
@@ -17,7 +18,7 @@ module Mollie
     end
 
     def prepare_payment(amount, description, redirect_url, metadata = {}, method=nil, method_params = {})
-      response = self.class.post('/payments',
+      response = self.class.post("/#{self.api_version}/payments",
         :body => {
           :amount => amount,
           :description => description,
@@ -33,7 +34,7 @@ module Mollie
     end
 
     def issuers
-      response = self.class.get("/issuers",
+      response = self.class.get("/#{self.api_version}/issuers",
         :headers => {
           'Authorization' => auth_token
         }
@@ -43,7 +44,7 @@ module Mollie
     end
 
     def payment_status(payment_id)
-      response = self.class.get("/payments/#{payment_id}",
+      response = self.class.get("/#{self.api_version}/payments/#{payment_id}",
         :headers => {
           'Authorization' => auth_token
         }
@@ -52,7 +53,7 @@ module Mollie
     end
 
     def refund_payment(payment_id)
-      response = self.class.post("/payments/#{payment_id}/refunds",
+      response = self.class.post("/#{self.api_version}/payments/#{payment_id}/refunds",
         :headers => {
           'Authorization' => auth_token
         }
@@ -61,7 +62,7 @@ module Mollie
     end
 
     def payment_methods(method = nil)
-      response = self.class.get("/methods/#{method}",
+      response = self.class.get("/#{self.api_version}/methods/#{method}",
         :headers => {
           'Authorization' => auth_token
         }
