@@ -5,7 +5,7 @@ require 'mollie_api/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "mollie-ruby-multi-version"
-  spec.version       = Mollie::VERSION
+  spec.version       = MollieApi::VERSION
   spec.authors       = ["Isabella Santos"]
   spec.email         = ["isabella.cdossantos@gmail.com"]
   spec.description   = %q{Ruby API Client for Mollie}
