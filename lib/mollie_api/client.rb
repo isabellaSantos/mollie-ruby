@@ -4,7 +4,7 @@ require 'json'
 module MollieApi
   class Client
     include HTTParty
-    base_uri "https://api.mollie.nl"
+    base_uri "https://api.mollie.com"
     format :json
     attr_accessor :api_key, :api_version
 
@@ -62,7 +62,13 @@ module MollieApi
     end
 
     def payment_methods(method = nil)
-      response = self.class.get("/#{self.api_version}/methods/#{method}",
+      if method
+        url = "/#{self.api_version}/methods/#{method}"
+      else
+        url = "/#{self.api_version}/methods"
+      end
+
+      response = self.class.get(url,
         :headers => {
           'Authorization' => auth_token
         }
