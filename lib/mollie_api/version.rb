@@ -1,3 +1,3 @@
-module Mollie
+module MollieApi
   VERSION = "0.3.0"
 end

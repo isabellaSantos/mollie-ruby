@@ -1,7 +1,7 @@
 require 'httparty'
 require 'json'
 
-module Mollie
+module MollieApi
   class Client
     include HTTParty
     base_uri "https://api.mollie.nl"

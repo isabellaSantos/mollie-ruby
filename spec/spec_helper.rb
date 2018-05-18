@@ -1,7 +1,7 @@
 #require "codeclimate-test-reporter"
 #CodeClimate::TestReporter.start
 
-require 'mollie'
+require 'mollie_ruby_multi_version'
 require 'vcr'
 require 'pry'
 

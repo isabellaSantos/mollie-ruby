@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'mollie/version'
+require 'mollie_api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "mollie-ruby"
+  spec.name          = "mollie-ruby-multi-version"
   spec.version       = Mollie::VERSION
-  spec.authors       = ["Peter Berkenbosch"]
-  spec.email         = ["peter@pero-ict.nl"]
+  spec.authors       = ["Isabella Santos"]
+  spec.email         = ["isabella.cdossantos@gmail.com"]
   spec.description   = %q{Ruby API Client for Mollie}
   spec.summary       = spec.description
-  spec.homepage      = "https://github.com/pero-ict-solutions/mollie"
+  spec.homepage      = "https://github.com/isabellaSantos/mollie-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
