@@ -52,8 +52,9 @@ module MollieApi
       JSON.parse(response.body)
     end
 
-    def refund_payment(payment_id)
+    def refund_payment(payment_id, params = {})
       response = self.class.post("/#{self.api_version}/payments/#{payment_id}/refunds",
+        :query => params,
         :headers => {
           'Authorization' => auth_token
         }

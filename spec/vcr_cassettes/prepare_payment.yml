@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.mollie.nl/v1/payments
+    uri: https://api.mollie.com/v1/payments
     body:
       encoding: UTF-8
       string: amount=99.99&description=My%20fantastic%20product&redirectUrl=http%3A%2F%2Flocalhost%3A3000%2Fpayments%2F1%2Fupdate&metadata[order_id]=R232454365&method=

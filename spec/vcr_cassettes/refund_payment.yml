@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.mollie.nl/v1/payments/tr_8NQDMOE7EC/refunds
+    uri: https://api.mollie.com/v1/payments/tr_8NQDMOE7EC/refunds
     body:
       encoding: UTF-8
       string: ''

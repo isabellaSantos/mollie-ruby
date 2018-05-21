@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.mollie.nl/v1/payments/tr_8NQDMOE7EC/refunds
+    uri: https://api.mollie.com/v1/payments/tr_8NQDMOE7EC/refunds
     body:
       encoding: UTF-8
       string: ''
@@ -37,6 +37,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"error":{"type":"request","message":"Unauthorized request","links":{"documentation":"https://www.mollie.nl/api/docs/"}}}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 08 Oct 2014 20:27:36 GMT
 recorded_with: VCR 2.9.3

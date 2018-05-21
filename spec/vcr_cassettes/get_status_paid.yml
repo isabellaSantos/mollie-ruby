@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.mollie.nl/v1/payments/tr_8NQDMOE7EC
+    uri: https://api.mollie.com/v1/payments/tr_8NQDMOE7EC
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.mollie.nl/v1/methods/
+    uri: https://api.mollie.com/v1/methods
     body:
       encoding: US-ASCII
       string: ''
@@ -42,6 +42,6 @@ http_interactions:
         Cash","amount":{"minimum":"0.31","maximum":"10000.00"},"image":{"normal":"https://www.mollie.com/images/payscreen/methods/mistercash.png","bigger":"https://www.mollie.com/images/payscreen/methods/mistercash@2x.png"}},{"id":"sofort","description":"SOFORT
         Banking","amount":{"minimum":"0.31","maximum":"5000.00"},"image":{"normal":"https://www.mollie.com/images/payscreen/methods/sofort.png","bigger":"https://www.mollie.com/images/payscreen/methods/sofort@2x.png"}},{"id":"banktransfer","description":"Bank
         transfer","amount":{"minimum":"0.31","maximum":"50000.00"},"image":{"normal":"https://www.mollie.com/images/payscreen/methods/banktransfer.png","bigger":"https://www.mollie.com/images/payscreen/methods/banktransfer@2x.png"}},{"id":"bitcoin","description":"Bitcoin","amount":{"minimum":"1.00","maximum":"15000.00"},"image":{"normal":"https://www.mollie.com/images/payscreen/methods/bitcoin.png","bigger":"https://www.mollie.com/images/payscreen/methods/bitcoin@2x.png"}},{"id":"paypal","description":"PayPal","amount":{"minimum":"0.13","maximum":"5000.00"},"image":{"normal":"https://www.mollie.com/images/payscreen/methods/paypal.png","bigger":"https://www.mollie.com/images/payscreen/methods/paypal@2x.png"}},{"id":"paysafecard","description":"paysafecard","amount":{"minimum":"1.00","maximum":"999.99"},"image":{"normal":"https://www.mollie.com/images/payscreen/methods/paysafecard.png","bigger":"https://www.mollie.com/images/payscreen/methods/paysafecard@2x.png"}}]}'
-    http_version: 
+    http_version:
   recorded_at: Fri, 30 Jan 2015 08:39:01 GMT
 recorded_with: VCR 2.9.3
